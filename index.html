@@ -8,32 +8,15 @@
     <script src="assets/js/script.js"></script>
 </head>
 <body>
-
     <div class="container">
-        <div class="sidebar">
-            <h2>Dashboard</h2>
-            <ul>
-                <li>Overview</li>
-                <li>Analytics</li>
-                <li>Reports</li>
-                <li>Settings</li>
-                <li>Logout</li>
-            </ul>
+        <h1>Todo list</h1>
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="Enter a task...">
+            <button id="addBtn">Add</button>
         </div>
-        <div class="main-content">
-            <h1 id="page-title">Dashboard Overview</h1>
-            <div class="widget">
-                <h2>Search for something</h2>
-                <input type="text" id="searchTerm" placeholder="Enter a search term" />
-                <button id="searchButton">Search</button>
-            </div>
-            <div class="widget">
-                <h2>Recent Searches</h2>
-                <ul id="searches">
-                </ul>
-            </div>
-            
-        </div>
+        <div id="errorMsg" class="error"></div>
+        <ul id="todoList"></ul>
+        <div id="emptyMsg" class="empty-message">No tasks</div>
     </div>
 </body>
 
