@@ -1,66 +1,48 @@
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5;
+body,
+html {
     margin: 0;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f9;
 }
 
 .container {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    height: 100vh;
+}
+
+
+.main-content {
+    flex: 1;
     padding: 20px;
-    width: 100%;
+    overflow-y: auto;
 }
 
- h1 {
+.main-content h1 {
     margin-bottom: 20px;
-    color: #333;
-    text-align: center;
 }
 
-#addbtn {
-    padding: 10px 15px;
-    background-color: #4CAF50;
+.widget {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #2d3e50;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
 }
 
-.input-section {
-    display: flex;
-    margin-bottom: 20px;
-    gap: 10px;
-}
-
-#taskInput {
-    flex: 1;  /* size of all other elements has equal width to content */
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-#errorMsg {
-    color: red;
-}
-
-#todoList {
-    list-style-type: none;
-    padding: 0;
-}
-
-#listItem {
-    list-style-type: none;
-    padding: 0;
-}
-
-.completed {
-    text-decoration: line-through;
-    color: #888;
+input[type="text"] {
+    padding: 9px;
+    width: 20%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
