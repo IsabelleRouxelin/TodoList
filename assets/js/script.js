@@ -2,36 +2,40 @@
 // Thing we need:
 /* arrays to store taks 
 event listeners to respond to clicks to create/remove tasks *maybe edit
-need to be able to add and delete tasks to start 
-*/
-// Array to store tasks 
-var tasks = [];
-var newTask = [1];
+need to be able to add and delete tasks to start */
+
+//Array to store tasks - unsure if still needed
+let tasks = [];
 
 //DOM elements
-var taskInput = document.getElementById("taskInput");
-var addBtn = document.getElementById("addBtn");
-var errorMsg = document.getElementById("errorMsg");
-var todoList = document.getElementById("todoList");
-var emptyMsg = document.getElementById("emptyMsg");
+const taskInput = document.getElementById("taskInput");
+const addBtn = document.getElementById("addBtn");
+const todoList = document.getElementById("todoList");
 
-// Event listeners
-//add task 
-addBtn.addEventListener("click", addTask);
 
 //validate input
 function addTask() {
-    var text = taskInput.value(); //gets task input 
-    
+    const text = taskInput.value.trim(); //gets task input 
     if (text === "") {
-        showError("Please enter a task"); // if empty show error
+       alert("Please enter a task"); // if empty show error
         return;
+    } else {
+        (text !== "");
+        tasks.push(newTask);
     }
-}
+    displayTasks();
+};
 
-// display and update tasks
 
-// should we use push? or should this be
+
+// display 
+
+
+
+//add task when button is clicked
+addBtn.addEventListener("click", addTask);
+
+// could add delete button here perhaps?
 
 //implement the delete functionality
 
