@@ -39,6 +39,10 @@ button {
     cursor: pointer;
 }
 
+button:hover {
+    background-color: #316bb7;
+}
+
 input[type="text"] {
     padding: 9px;
     width: 20%;
