@@ -8,12 +8,29 @@ need to be able to add and delete tasks to start */
 let tasks = [];
 
 //DOM elements
-const taskInput = document.getElementById("taskInput");
-const addBtn = document.getElementById("addBtn");
-const todoList = document.getElementById("todoList");
+var taskInput = document.getElementById("taskInput");
+var addBtn = document.getElementById("addBtn");
+
+addBtn.addEventListener("click", onClickaddBtn);
+
+function onClickaddBtn() {
+
+  var taskInputValue = taskInput.value;
+
+  var todoList = document.getElementById("todoList");
+  
+  var newtaskEl = document.createElement("li");
+ 
+  newtaskEl.textContent = taskInputValue;
+ 
+  todoList.appendChild(newTaskEl);
+
+};
 
 
-//validate input
+
+
+/*validate input
 function addTask() {
     const text = taskInput.value.trim(); //gets task input 
     if (text === "") {
@@ -41,4 +58,4 @@ addBtn.addEventListener("click", addTask);
 
 // *tasks to be edited 
 
-//* tasks to be saved
+//* tasks to be saved */
